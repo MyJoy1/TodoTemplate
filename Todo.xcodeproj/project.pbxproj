@@ -16,6 +16,7 @@
 		645FD990288FFB8A0062AD1D /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD98F288FFB8A0062AD1D /* TodoTests.swift */; };
 		645FD99A288FFB8A0062AD1D /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD999288FFB8A0062AD1D /* TodoUITests.swift */; };
 		645FD99C288FFB8A0062AD1D /* TodoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD99B288FFB8A0062AD1D /* TodoUITestsLaunchTests.swift */; };
+		645FD9A9289042970062AD1D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD9A8289042970062AD1D /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		645FD995288FFB8A0062AD1D /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		645FD999288FFB8A0062AD1D /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		645FD99B288FFB8A0062AD1D /* TodoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		645FD9A8289042970062AD1D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				645FD981288FFB8A0062AD1D /* Assets.xcassets */,
 				645FD983288FFB8A0062AD1D /* LaunchScreen.storyboard */,
 				645FD986288FFB8A0062AD1D /* Info.plist */,
+				645FD9A8289042970062AD1D /* StorageManager.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				645FD97D288FFB860062AD1D /* ViewController.swift in Sources */,
 				645FD979288FFB860062AD1D /* AppDelegate.swift in Sources */,
 				645FD97B288FFB860062AD1D /* SceneDelegate.swift in Sources */,
+				645FD9A9289042970062AD1D /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
