@@ -24,4 +24,10 @@ struct StorageManager {
     todoList.append(content)
     defaultStand.set(todoList, forKey: TODO_LIST_KEY)
   }
+    
+  static func cleanTodoItems() {
+    var todoList = defaultStand.stringArray(forKey: TODO_LIST_KEY) ?? []
+    todoList.removeAll()
+    defaultStand.set(todoList, forKey: TODO_LIST_KEY)
+  }
 }
