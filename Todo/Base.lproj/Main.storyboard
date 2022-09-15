@@ -39,14 +39,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="请输入" translatesAutoresizingMaskIntoConstraints="NO" id="0OJ-Mx-I16">
-                                <rect key="frame" x="82" y="218" width="250" height="51"/>
+                                <rect key="frame" x="82" y="213" width="250" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="LUZ-vc-VKk"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY6-Xa-cJd">
-                                <rect key="frame" x="181" y="294" width="53" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY6-Xa-cJd">
+                                <rect key="frame" x="180.5" y="299" width="53" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="确认"/>
                             </button>
@@ -54,8 +54,8 @@
                         <viewLayoutGuide key="safeArea" id="WcW-Ca-dvj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0OJ-Mx-I16" firstAttribute="top" secondItem="WcW-Ca-dvj" secondAttribute="top" constant="130" id="POy-h1-ncg"/>
-                            <constraint firstItem="NY6-Xa-cJd" firstAttribute="top" secondItem="0OJ-Mx-I16" secondAttribute="bottom" constant="34" id="j0i-EI-6kJ"/>
+                            <constraint firstItem="0OJ-Mx-I16" firstAttribute="top" secondItem="WcW-Ca-dvj" secondAttribute="top" constant="125" id="POy-h1-ncg"/>
+                            <constraint firstItem="NY6-Xa-cJd" firstAttribute="top" secondItem="0OJ-Mx-I16" secondAttribute="bottom" constant="35" id="j0i-EI-6kJ"/>
                             <constraint firstItem="0OJ-Mx-I16" firstAttribute="centerX" secondItem="b1r-Iw-3v2" secondAttribute="centerX" id="ovp-NF-Hhq"/>
                             <constraint firstItem="NY6-Xa-cJd" firstAttribute="centerX" secondItem="b1r-Iw-3v2" secondAttribute="centerX" id="w2s-75-H76"/>
                         </constraints>
@@ -95,23 +95,23 @@
                         <subviews>
                             <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-us-Lgv">
                                 <rect key="frame" x="20" y="743" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QXO-Wb-Hqe"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="退出登录"/>
+                                <buttonConfiguration key="configuration" style="filled" title="退出登录">
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="ZyE-EO-Uq2">
-                                <rect key="frame" x="132" y="170" width="150" height="150"/>
+                                <rect key="frame" x="139.5" y="170" width="135" height="135"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="GhD-aQ-nTm"/>
-                                    <constraint firstAttribute="width" constant="150" id="Kam-js-YGI"/>
+                                    <constraint firstAttribute="width" secondItem="ZyE-EO-Uq2" secondAttribute="height" multiplier="1:1" id="6aT-dU-bz1"/>
+                                    <constraint firstAttribute="width" constant="135" id="ede-0F-CJd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auQ-Qx-wJG">
-                                <rect key="frame" x="182" y="342" width="55" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auQ-Qx-wJG">
+                                <rect key="frame" x="181.5" y="335" width="51" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,8 +122,6 @@
                         <constraints>
                             <constraint firstItem="auQ-Qx-wJG" firstAttribute="centerX" secondItem="QOv-GM-Moi" secondAttribute="centerX" id="0vI-sc-xXb"/>
                             <constraint firstItem="auQ-Qx-wJG" firstAttribute="top" secondItem="ZyE-EO-Uq2" secondAttribute="bottom" constant="30" id="52k-cJ-Gih"/>
-                            <constraint firstItem="zzd-us-Lgv" firstAttribute="centerX" secondItem="auQ-Qx-wJG" secondAttribute="centerX" id="71B-12-YDM"/>
-                            <constraint firstItem="zzd-us-Lgv" firstAttribute="centerX" secondItem="ZyE-EO-Uq2" secondAttribute="centerX" id="81m-ZF-qVZ"/>
                             <constraint firstItem="ZyE-EO-Uq2" firstAttribute="centerX" secondItem="QOv-GM-Moi" secondAttribute="centerX" id="Rdr-Av-BFf"/>
                             <constraint firstItem="WSR-a0-jP7" firstAttribute="bottom" secondItem="zzd-us-Lgv" secondAttribute="bottom" constant="20" id="WYE-cF-9FI"/>
                             <constraint firstItem="ZyE-EO-Uq2" firstAttribute="top" secondItem="WSR-a0-jP7" secondAttribute="top" constant="82" id="XMC-z1-qTu"/>
@@ -136,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNF-tn-FSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414.4927536231885" y="811.60714285714278"/>
+            <point key="canvasLocation" x="1414.4859813084111" y="811.23110151187916"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RMV-Dm-Tgj">
