@@ -11,6 +11,9 @@
 		618113DB28D72C7600E0B17B /* TodoTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618113DA28D72C7500E0B17B /* TodoTaskViewModel.swift */; };
 		618113E428D7348D00E0B17B /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618113E328D7348D00E0B17B /* TodoTask.swift */; };
 		618113E728D741E900E0B17B /* TodoTaskViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618113E628D741E900E0B17B /* TodoTaskViewModelTest.swift */; };
+		618113F028D758C900E0B17B /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 618113EF28D758C900E0B17B /* Quick */; };
+		618113F228D758CD00E0B17B /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 618113F128D758CD00E0B17B /* Nimble */; };
+		61BC669528D75B8A007CF450 /* TodoTaskViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC669428D75B8A007CF450 /* TodoTaskViewModelSpec.swift */; };
 		645FD979288FFB860062AD1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD978288FFB860062AD1D /* AppDelegate.swift */; };
 		645FD97B288FFB860062AD1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD97A288FFB860062AD1D /* SceneDelegate.swift */; };
 		645FD97D288FFB860062AD1D /* TodoTaskShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645FD97C288FFB860062AD1D /* TodoTaskShowController.swift */; };
@@ -45,6 +48,7 @@
 		618113DA28D72C7500E0B17B /* TodoTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskViewModel.swift; sourceTree = "<group>"; };
 		618113E328D7348D00E0B17B /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 		618113E628D741E900E0B17B /* TodoTaskViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskViewModelTest.swift; sourceTree = "<group>"; };
+		61BC669428D75B8A007CF450 /* TodoTaskViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTaskViewModelSpec.swift; sourceTree = "<group>"; };
 		645FD975288FFB860062AD1D /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645FD978288FFB860062AD1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		645FD97A288FFB860062AD1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,17 +66,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		645FD972288FFB860062AD1D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		645FD988288FFB8A0062AD1D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618113F028D758C900E0B17B /* Quick in Frameworks */,
+				618113F228D758CD00E0B17B /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +114,16 @@
 			isa = PBXGroup;
 			children = (
 				618113E628D741E900E0B17B /* TodoTaskViewModelTest.swift */,
+				61BC669428D75B8A007CF450 /* TodoTaskViewModelSpec.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		618113EE28D758C900E0B17B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		645FD96C288FFB860062AD1D = {
@@ -126,6 +133,7 @@
 				645FD98E288FFB8A0062AD1D /* TodoTests */,
 				645FD998288FFB8A0062AD1D /* TodoUITests */,
 				645FD976288FFB860062AD1D /* Products */,
+				618113EE28D758C900E0B17B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,7 +190,6 @@
 			buildConfigurationList = 645FD99F288FFB8A0062AD1D /* Build configuration list for PBXNativeTarget "Todo" */;
 			buildPhases = (
 				645FD971288FFB860062AD1D /* Sources */,
-				645FD972288FFB860062AD1D /* Frameworks */,
 				645FD973288FFB860062AD1D /* Resources */,
 			);
 			buildRules = (
@@ -190,6 +197,10 @@
 			dependencies = (
 			);
 			name = Todo;
+			packageProductDependencies = (
+				618113E928D7584100E0B17B /* Quick */,
+				618113EC28D7588600E0B17B /* Nimble */,
+			);
 			productName = Todo;
 			productReference = 645FD975288FFB860062AD1D /* Todo.app */;
 			productType = "com.apple.product-type.application";
@@ -205,9 +216,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				618113F628D758E200E0B17B /* PBXTargetDependency */,
+				618113F428D758DE00E0B17B /* PBXTargetDependency */,
 				645FD98D288FFB8A0062AD1D /* PBXTargetDependency */,
 			);
 			name = TodoTests;
+			packageProductDependencies = (
+				618113EF28D758C900E0B17B /* Quick */,
+				618113F128D758CD00E0B17B /* Nimble */,
+			);
 			productName = TodoTests;
 			productReference = 645FD98B288FFB8A0062AD1D /* TodoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -262,6 +279,10 @@
 				Base,
 			);
 			mainGroup = 645FD96C288FFB860062AD1D;
+			packageReferences = (
+				618113E828D7584100E0B17B /* XCRemoteSwiftPackageReference "Quick" */,
+				618113EB28D7588600E0B17B /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 645FD976288FFB860062AD1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				645FD990288FFB8A0062AD1D /* TodoTests.swift in Sources */,
+				61BC669528D75B8A007CF450 /* TodoTaskViewModelSpec.swift in Sources */,
 				618113E728D741E900E0B17B /* TodoTaskViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +358,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		618113F428D758DE00E0B17B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 618113F328D758DE00E0B17B /* Quick */;
+		};
+		618113F628D758E200E0B17B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 618113F528D758E200E0B17B /* Nimble */;
+		};
 		645FD98D288FFB8A0062AD1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 645FD974288FFB860062AD1D /* Todo */;
@@ -648,6 +678,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		618113E828D7584100E0B17B /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
+		618113EB28D7588600E0B17B /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = exactVersion;
+				version = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		618113E928D7584100E0B17B /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618113E828D7584100E0B17B /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		618113EC28D7588600E0B17B /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618113EB28D7588600E0B17B /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		618113EF28D758C900E0B17B /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618113E828D7584100E0B17B /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		618113F128D758CD00E0B17B /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618113EB28D7588600E0B17B /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		618113F328D758DE00E0B17B /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618113E828D7584100E0B17B /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		618113F528D758E200E0B17B /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618113EB28D7588600E0B17B /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 645FD96D288FFB860062AD1D /* Project object */;
 }
