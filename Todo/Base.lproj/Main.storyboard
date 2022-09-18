@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="foO-PP-HDl">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,9 +11,9 @@
         <!--今日待办-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TodoTaskShowController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,11 +35,15 @@
             <objects>
                 <viewController id="TgA-jo-Gyd" customClass="TodoTaskAddController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b1r-Iw-3v2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY6-Xa-cJd">
-                                <rect key="frame" x="180.66666666666666" y="307" width="53" height="31"/>
+                                <rect key="frame" x="164" y="313" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HUr-mE-R5o"/>
+                                    <constraint firstAttribute="height" constant="40" id="Zt2-Qy-yol"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="确认"/>
                                 <connections>
@@ -47,9 +51,10 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szi-ig-liM">
-                                <rect key="frame" x="82" y="238" width="250" height="34"/>
+                                <rect key="frame" x="64" y="238" width="300" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Nac-Ot-N6w"/>
+                                    <constraint firstAttribute="width" constant="300" id="Nac-Ot-N6w"/>
+                                    <constraint firstAttribute="height" constant="40" id="brd-D9-7R7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -81,7 +86,7 @@
                     <tabBarItem key="tabBarItem" title="Todo" image="list.bullet" catalog="system" id="1Uf-XV-7Nk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I0f-xo-zcg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -98,12 +103,13 @@
             <objects>
                 <viewController id="8R3-Pr-Ypo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOv-GM-Moi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-us-Lgv">
-                                <rect key="frame" x="20" y="743" width="374" height="50"/>
+                                <rect key="frame" x="64" y="773" width="300" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4AT-Y3-krn"/>
                                     <constraint firstAttribute="height" constant="50" id="QXO-Wb-Hqe"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -112,15 +118,15 @@
                                 </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="ZyE-EO-Uq2">
-                                <rect key="frame" x="139.66666666666666" y="170" width="134.99999999999997" height="135"/>
+                                <rect key="frame" x="146.66666666666666" y="170" width="134.99999999999997" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZyE-EO-Uq2" secondAttribute="height" multiplier="1:1" id="6aT-dU-bz1"/>
                                     <constraint firstAttribute="width" constant="135" id="ede-0F-CJd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auQ-Qx-wJG">
-                                <rect key="frame" x="181.66666666666666" y="335" width="51" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="193.66666666666666" y="335" width="41" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -133,8 +139,6 @@
                             <constraint firstItem="ZyE-EO-Uq2" firstAttribute="centerX" secondItem="QOv-GM-Moi" secondAttribute="centerX" id="Rdr-Av-BFf"/>
                             <constraint firstItem="WSR-a0-jP7" firstAttribute="bottom" secondItem="zzd-us-Lgv" secondAttribute="bottom" constant="20" id="WYE-cF-9FI"/>
                             <constraint firstItem="ZyE-EO-Uq2" firstAttribute="top" secondItem="WSR-a0-jP7" secondAttribute="top" constant="82" id="XMC-z1-qTu"/>
-                            <constraint firstItem="WSR-a0-jP7" firstAttribute="trailing" secondItem="zzd-us-Lgv" secondAttribute="trailing" constant="20" id="abO-8x-jSs"/>
-                            <constraint firstItem="zzd-us-Lgv" firstAttribute="leading" secondItem="WSR-a0-jP7" secondAttribute="leading" constant="20" id="iqv-CO-ZjB"/>
                             <constraint firstItem="zzd-us-Lgv" firstAttribute="centerX" secondItem="QOv-GM-Moi" secondAttribute="centerX" id="pcF-o7-AOa"/>
                         </constraints>
                     </view>
@@ -170,7 +174,7 @@
                     <tabBarItem key="tabBarItem" title="Me" image="person.circle" catalog="system" id="QQ5-9o-Fxr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RmL-Ek-5HA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
