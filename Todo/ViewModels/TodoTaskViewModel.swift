@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 final class TodoTaskViewModel {
-    var todoTaskList = TodoTask(task: [])
     /// 获取数据
     func getTodoTask() -> [String]{
         return StorageManager.getTodoList()
@@ -31,4 +30,9 @@ final class TodoTaskViewModel {
         StorageManager.saveTodoItem(content: todoTask)
     }
     
+    
+    func addTask(text: String, completed: () -> Void) {
+        StorageManager.saveTodoItem(content: text)
+        completed()
+    }
 }

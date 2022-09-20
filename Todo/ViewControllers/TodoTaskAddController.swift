@@ -9,6 +9,9 @@ import UIKit
 class TodoTaskAddController: UIViewController {
     let todoTaskViewModel = TodoTaskViewModel()
     
+//    typealias taskCompleted = () -> Void
+//    var completed: taskCompleted?
+    
     @IBOutlet weak var taskText: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     
@@ -18,10 +21,9 @@ class TodoTaskAddController: UIViewController {
     
     @IBAction func clickBtn(_ sender: UIButton) {
         guard let taskName = taskText.text else { return }
-        
-        todoTaskViewModel.saveTodoTask(taskName)
-        
-        back()
+        todoTaskViewModel.addTask(text: taskName) { back() }
+//        todoTaskViewModel.saveTodoTask(taskName)
+//        back()
     }
     
     override func viewDidLoad() {
