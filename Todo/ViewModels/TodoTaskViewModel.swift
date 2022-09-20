@@ -8,10 +8,7 @@
 import Foundation
 import UIKit
 final class TodoTaskViewModel {
-    static let NumberOne = 1
-    
-    var todoTask = TodoTask(task: [])
-    
+    var todoTaskList = TodoTask(task: [])
     /// 获取数据
     func getTodoTask() -> [String]{
         return StorageManager.getTodoList()
@@ -19,11 +16,11 @@ final class TodoTaskViewModel {
     
     /// 添加序号
     func addTodoTaskNumber(_ task: [String]) -> [String] {
+        var todoTask = TodoTask(task: [])
         todoTask.task = task
-        var taskNumber = TodoTaskViewModel.NumberOne
-        for item in task{
-            todoTask.task[taskNumber - TodoTaskViewModel.NumberOne] = "\(taskNumber). " + "\(item)"
-            taskNumber += TodoTaskViewModel.NumberOne
+        
+        for i in 0..<todoTask.task.count {
+            todoTask.task[i] = "\(i+1). " + "\(todoTask.task[i])"
         }
         
         return todoTask.task

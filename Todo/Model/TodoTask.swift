@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct TodoTask{
-  var task: [String]
+struct TodoTask {
+    var task: [String]
 }
